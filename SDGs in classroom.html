@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG classroom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            color: white;
+        }
+
+        #illustrations {
+            margin-top: 20px;
+        }
+
+        .illustration-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 80%;
+        }
+
+        .illustration {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .illustration-text {
+            font-size: 16px;
+            text-align: justify;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        #sphere-illustrations {
+            margin-top: 40px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .slide img {
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+            opacity: 0.8;
+            border-radius: 10px;
+            filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            width: 50%; 
+            border-radius: 20px; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            color: white;
+            z-index: 2;
+        }
+
+        .text h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .text p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .slide img.csr-goal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            z-index: 1;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: black;
+            background-color: rgba(255,255,255,0.8);
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Sustainable Development Goals </h1>
+        <p>On this page you will learn the basics of the SDGs, including all important aspects of the social, economic and environmental spheres.</p>
+    </header>
+
+    <section id="illustrations">
+        <div class="illustration-card">
+            <img src="https://thebalochistanpost.net/wp-content/uploads/2018/01/UN1.jpg" alt="ООН Иллюстрация" class="illustration">
+            <p class="illustration-text">The UN actively supports the implementation of the Sustainable Development Goals (SDGs) aimed at improving people's lives and protecting the planet. The Organization strives for global cooperation so that all countries of the world can work together to achieve these goals. Each of the 17 Goals is closely linked to social, economic and environmental sustainability, making the SDGs the main guideline in international policy and development. The UN calls on States and the public to take active action to create a more just and equal world for all.</p>
+        </div>
+
+        <div class="illustration-card">
+            <img src="http://uploads-ssl.webflow.com/5b6c0c5a681f8928a2b23e9c/5be0025b5361b705302c11fe_Poster%20(SDGs).jpg" alt="Цели Устойчивого Развития" class="illustration">
+            <p class="illustration-text">The Sustainable Development Goals (SDGs) include 17 global goals, each of which is aimed at solving key problems of our time. From eliminating poverty and hunger to providing quality education and sustainable management of natural resources, the SDGs represent a comprehensive approach to global challenges. These goals are not only aimed at improving the lives of millions of people, but also at ensuring the long-term environmental sustainability of our planet, which is especially important in the context of global climate change.</p>
+        </div>
+    </section>
+
+    <section id="sphere-illustrations">
+        <h2>Areas of development</h2>
+        <div class="slideshow-container">
+            <div class="slides">
+                <div class="slide">
+                    <a href="https://www.teachengineering.org/" target="_blank">
+                        <img src="https://i.pinimg.com/originals/64/65/70/646570cec2fd818f9d91aafc554b03f7.jpg" alt="Инженерия">
+                    </a>
+                    <img class="csr-goal" src="https://nko-expert.ru/assets/cache_image/assets/img/mission/mission_ind_0x0_f64.jpg" alt="ЦУР 9">
+                    <div class="text">
+                        <h2>Engineering</h2>
+                        <p>Engineering contributes to the development of new technologies and the improvement of infrastructure for sustainable development.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="https://www.nationalgeographic.com/environment/" target="_blank">
+                        <img src="https://pbs.twimg.com/media/EFCXSSwU4AArFAe.jpg" alt="Экология">
+                    </a>
+                    <img class="csr-goal" src="https://rusal.ru/local/templates/main/images/sustainability/un-sdg-13.svg" alt="ЦУР 13">
+                    <div class="text">
+                        <h2>Ecology</h2>
+                        <p>Ecology explores ways to protect the environment and restore natural resources.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="https://www.khanacademy.org/economics-finance-domain" target="_blank">
+                        <img src="http://media.zenfs.com/en-US/coindesk_75/5e675eb2c2d0fb867717bb608ae7d278" alt="Экономика">
+                    </a>
+                    <img class="csr-goal" src="https://sdgs.un.org/sites/default/files/2020-10/F_SDG_PRINT-08.jpg" alt="ЦУР 8">
+                    <div class="text">
+                        <h2>Economy</h2>
+                        <p>The economy plays a central role in ensuring decent work for all and sustainable growth.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="https://www.bbc.co.uk/bitesize/subjects/zxnygk7" target="_blank">
+                        <img src="http://quasa.io/storage/images/news/TFOD9frl6CDPVWRvZ5KM3JK3AuzWRADOc32AMio4.webp" alt="Социальная сфера">
+                    </a>
+                    <img class="csr-goal" src="https://atu.edu.kz/userfiles/images/university/passport/5kz.png" alt="ЦУР 10">
+                    <div class="text">
+                        <h2>Social Development</h2>
+                        <p>The social sphere encompasses gender equality, human rights and equal opportunities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        function moveSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            }
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function autoSlide() {
+            moveSlide(1);
+        }
+
+        setInterval(autoSlide, 5000);  // Автоматическая смена каждые 5 секунд
+    </script>
+</body>
+</html>
+
